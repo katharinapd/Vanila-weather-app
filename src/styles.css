@@ -1,0 +1,69 @@
+.form-control {
+    position: relative;
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 12px 20px;
+    margin: 90px 250x;
+    right: 0px;
+    width: 350px;
+    margin-top: 90px;
+}
+
+body {
+    background-color: white;
+    border-color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    text-align: left;
+    padding: 50px 10px 10px;
+    margin: 0px;
+}
+
+h2 {
+    font-size: 15px;
+}
+
+.col-sm {
+    position: relative;
+    right: 0px;
+}
+
+h4 {
+    text-align: center;
+    padding: 20px;
+    text-shadow: 10px;
+    font-weight: bolder;
+}
+
+h3 {
+    text-align: left;
+    padding: 0px 38px 0px;
+}
+
+.snow {
+    padding: 0px 33px;
+    font-size: 28px;
+
+}
+
+.box {
+    margin: 5px auto;
+    max-width: 800px;
+    padding: 50px 100px;
+    background-position: center;
+    background: border-box beige;
+    border: 2px solid black;
+
+}
+
+.emoji {
+    padding: 10px 23px;
+    font-size: 28px;
+    color: #9999ff;
+}
+
+a {
+    text-align: left;
+}
