@@ -31,13 +31,22 @@
         <li id ="dataInfo">
             Tuesday 17:12
         </li>
-        <li id ="descr">Clear</li>
+        <li id ="descr"></li>
+        </ul>
+        <div class="row">
+          <div class="col-6">
+            <div class="clearfix weather-temperature">
         <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="" id="icon">
-        <li id="degree">
-            4˚
-        </li>
-         </ul>
+        <div class="float-left">
+        <strong id="degree"></strong>
+        <span class="units">
+          <a href="#" id="celsius-link" class="active"> ˚C</a> |
+          <a href="#" id="fahrenheit-link">˚F</a></span>
         </div>
+        </div>
+        </div>
+        </div>
+      </div>
         <div class="col-4 col-sm-6">
           <input class="form-control" id="input-field" type="text" placeholder="Search..."> </br>
           <button type="submit" id="submit" class="btn btn-primary">Submit</button>
