@@ -20,6 +20,30 @@ if (minutes < 10) {
 }
 temp.innerHTML = `${day} ${hour}:${minutes}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  <div class="row">
+        <div class="col-2">
+          <div class="weather-forecast-date"></br>
+          ${day}
+        </div>
+          <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="" width="42"
+          /></br>
+          <div class="weather-forecast-temperature">
+          <span class="weather-forecast-temp-max">18</span>
+           <span class="weather-forecast-temp-min">12</span>
+         </div>
+        </div>`;
+    forecastElement.innerHTML = forecastHTML;
+  });
+}
 function searchResult(event) {
   event.preventDefault();
   let city = document.getElementById("input-field").value;
@@ -46,6 +70,14 @@ function showLocation(event) {
 
 let currentLocation = document.querySelector("#location");
 currentLocation.addEventListener("click", showLocation);
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = `f94dc68343401325eoe64866tbab7460`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid={API key}&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForcast);
+}
 
 function showTemperature(response) {
   console.log(response.data);
@@ -96,11 +128,15 @@ function displayCelsiusTemp(event) {
   fahrenheitLink.classList.remove("active");
   let temperatureElement = document.querySelector("#degree");
   temperatureElement.innerHTML = Math.round(celsiusTemp);
+
+  getForecast(response.data.coord);
 }
 let celsiusTemp = null;
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
+
+displayForecast();
 
 // let description = response.data.weather[0].description;
 //let descriptionInfo = document.querySelector("#descr");

@@ -1,17 +1,18 @@
 .form-control {
     position: relative;
-    border: 2px solid black;
-    border-radius: 4px;
-    padding: 12px 20px;
-    right: 0px;
-    width: 350px;
-    margin-top: 0px;
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 10px 16px;
+    right: 10px;
+    width: 370px;
+    margin-top: 15px;
 }
 
 body {
     background-color: white;
     border-color: black;
     font-family: 'Roboto', sans-serif;
+    border-radius: 2px;
 }
 
 h1 {
@@ -49,12 +50,13 @@ h3 {
 }
 
 .box {
-    margin: 5px auto;
-    max-width: 800px;
+    margin: 20px auto;
+    max-width: 900px;
     padding: 50px 100px;
     background-position: center;
-    background: border-box beige;
-    border: 2px solid black;
+    background: border-box white;
+    border: 1px solid black;
+    border-radius: 12px;
 
 }
 
